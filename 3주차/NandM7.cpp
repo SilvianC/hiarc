@@ -16,14 +16,11 @@ void solve(int level) {
     }
     
     for(int i=0;i<n;i++){
-        // 같은 수를 출력할 수 없음
-        if(!isUsed[i]) {
-            // num으로 숫자를 넣으면 해결
+        // num으로 숫자를 넣으면 해결
             isUsed[i] = true;
             answer[level] = num[i];
             solve(level+1);
             isUsed[i] = false;
-        }
     }
 }
 int main() {
